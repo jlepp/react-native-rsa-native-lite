@@ -61,35 +61,7 @@ class RNRSAKeychain: NSObject {
         }
         resolve(false)
     }
-    
-    @objc
-    func generateCSR(_ keyTag: String, CN: String, withAlgorithm: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
-        
-        let rsa_ec = RSAECNative(keyTag: keyTag)
-        let csr = rsa_ec.generateCSR(CN: CN, withAlgorithm: withAlgorithm)
-        if(csr != nil){
-            let keys = ["csr": csr]
-            resolve(keys)
-        }else {
-            reject("not exist CSR", "error", nil)
-        }
-    }
-    
-    @objc
-    func generateCSRWithEC(_ CN: String, keyTag: String, keySize: Int, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
-        
-        let rsa_ec = RSAECNative(keyTag: keyTag)
-        let res = rsa_ec.generateEC()
-        let pub = rsa_ec.encodedPublicKey()
-        let csr = rsa_ec.generateCSR(CN: CN, withAlgorithm: "SHA256withECDSA")
-        if(csr != nil){
-            let keys = ["csr": csr, "public": pub]
-            resolve(keys)
-        }else {
-            reject("not exist CSR", "error", nil)
-        }
-    }
-    
+     
     @objc
     func generateEC(_ keyTag: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         

@@ -1,6 +1,6 @@
 //
 //  RNRSASwift.swift
-//  test
+//  
 //
 
 //#if canImport(React)
@@ -10,7 +10,7 @@ import Foundation
 
 @objc(RNRSA)
 class RNRSA: NSObject {
-    
+
 
     @objc
     static
@@ -29,15 +29,15 @@ class RNRSA: NSObject {
             "SHA1withECDSA"   : "SHA1withECDSA"
         ]
     }
-    
-    
-    
+
+
+
     // generate key with default keysize - RSA - DER format
     @objc
     func generate(_ resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         self.generateKeys(2048, resolver: resolve, rejecter: reject)
     }
-    
+
     // generate key with keysize - RSA - DER format
     @objc
     func generateKeys(_ keySize: Int, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
@@ -52,7 +52,7 @@ class RNRSA: NSObject {
         }
         resolve(false)
     }
-    
+
     @objc
     func encrypt(_ message: String ,withKey: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         let rsa_ec = RSAECNative()
@@ -63,7 +63,7 @@ class RNRSA: NSObject {
         let msg = rsa_ec.encrypt(message: message)
         resolve(msg)
     }
-    
+
     @objc
     func decrypt(_ message: String ,withKey: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         let rsa_ec = RSAECNative()
@@ -74,8 +74,8 @@ class RNRSA: NSObject {
         let msg = rsa_ec.decrypt(message: message)
         resolve(msg)
     }
-    
-    
+
+
     @objc
     func encrypt64(_ message: String ,withKey: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         let rsa_ec = RSAECNative()
@@ -86,7 +86,7 @@ class RNRSA: NSObject {
         let msg = rsa_ec.encrypt64(message: message)
         resolve(msg)
     }
-    
+
     @objc
     func decrypt64(_ message: String ,withKey: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         let rsa_ec = RSAECNative()
@@ -97,7 +97,7 @@ class RNRSA: NSObject {
         let msg = rsa_ec.decrypt64(message: message)
         resolve(msg)
     }
-    
+
     @objc
     func verify(_ signature: String, withMessage: String ,withKey: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         let rsa_ec = RSAECNative()
@@ -112,7 +112,7 @@ class RNRSA: NSObject {
             resolve(true)
         }
     }
-    
+
     @objc
     func verifyWithAlgorithm(_ signature: String, withMessage: String ,withKey: String, withAlgorithm: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         let rsa_ec = RSAECNative()
@@ -129,8 +129,8 @@ class RNRSA: NSObject {
             resolve(true)
         }
     }
-    
-    
+
+
     @objc
     func verify64(_ signature: String, withMessage: String ,withKey: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         let rsa_ec = RSAECNative()
@@ -145,7 +145,7 @@ class RNRSA: NSObject {
             resolve(true)
         }
     }
-    
+
     @objc
     func verify64WithAlgorithm(_ signature: String, withMessage: String ,withKey: String, withAlgorithm: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         let rsa_ec = RSAECNative()
@@ -160,8 +160,8 @@ class RNRSA: NSObject {
             resolve(true)
         }
     }
-    
-    
+
+
     @objc
     func sign(_ message: String, withKey: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         let rsa_ec = RSAECNative()
@@ -176,7 +176,7 @@ class RNRSA: NSObject {
             resolve(signature)
         }
     }
-    
+
     @objc
     func signWithAlgorithm(_ message: String, withKey: String, withAlgorithm: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         let rsa_ec = RSAECNative()
@@ -191,7 +191,7 @@ class RNRSA: NSObject {
             resolve(signature)
         }
     }
-    
+
     @objc
     func sign64(_ message: String, withKey: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         let rsa_ec = RSAECNative()
@@ -206,7 +206,7 @@ class RNRSA: NSObject {
             resolve(signature)
         }
     }
-    
+
     @objc
     func sign64WithAlgorithm(_ message: String, withKey: String, withAlgorithm: String, resolver resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) -> Void {
         let rsa_ec = RSAECNative()
@@ -221,15 +221,5 @@ class RNRSA: NSObject {
             resolve(signature)
         }
     }
-    
+
 }
-
-
-
-
-
-
-
-
-
-

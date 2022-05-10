@@ -14,8 +14,6 @@
 		A055BAE723D5D0BC00E2A830 /* RSAECFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055BAE623D5D0BC00E2A830 /* RSAECFormatter.swift */; };
 		A055BAE923D5D0EF00E2A830 /* RSAECNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055BAE823D5D0EF00E2A830 /* RSAECNative.swift */; };
 		A055BAEB23D5D10C00E2A830 /* RSAKeyEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055BAEA23D5D10C00E2A830 /* RSAKeyEncoding.swift */; };
-		A055BAED23D5D12800E2A830 /* CSRSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055BAEC23D5D12800E2A830 /* CSRSwift.swift */; };
-		A055BAEF23D5D14000E2A830 /* CSRSwiftConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A055BAEE23D5D14000E2A830 /* CSRSwiftConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,8 +38,6 @@
 		A055BAE623D5D0BC00E2A830 /* RSAECFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAECFormatter.swift; sourceTree = "<group>"; };
 		A055BAE823D5D0EF00E2A830 /* RSAECNative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAECNative.swift; sourceTree = "<group>"; };
 		A055BAEA23D5D10C00E2A830 /* RSAKeyEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSAKeyEncoding.swift; sourceTree = "<group>"; };
-		A055BAEC23D5D12800E2A830 /* CSRSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSRSwift.swift; sourceTree = "<group>"; };
-		A055BAEE23D5D14000E2A830 /* CSRSwiftConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSRSwiftConstants.swift; sourceTree = "<group>"; };
 		BF40FFBD1F05EC4000DC4E95 /* libRNRSA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNRSA.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -59,8 +55,6 @@
 		BF40FFB41F05EC4000DC4E95 = {
 			isa = PBXGroup;
 			children = (
-				A055BAEE23D5D14000E2A830 /* CSRSwiftConstants.swift */,
-				A055BAEC23D5D12800E2A830 /* CSRSwift.swift */,
 				A055BAEA23D5D10C00E2A830 /* RSAKeyEncoding.swift */,
 				A055BAE823D5D0EF00E2A830 /* RSAECNative.swift */,
 				A055BAE623D5D0BC00E2A830 /* RSAECFormatter.swift */,
@@ -145,9 +139,7 @@
 				A055BAE523D5D09F00E2A830 /* RNRSAKeychain.swift in Sources */,
 				A055BAE123D5D04D00E2A830 /* RNRSA.swift in Sources */,
 				A055BAE323D5D08700E2A830 /* RNRSAKeychain.m in Sources */,
-				A055BAED23D5D12800E2A830 /* CSRSwift.swift in Sources */,
 				A055BADE23D5D02A00E2A830 /* RNRSA.m in Sources */,
-				A055BAEF23D5D14000E2A830 /* CSRSwiftConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

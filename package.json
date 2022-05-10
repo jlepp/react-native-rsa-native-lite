@@ -1,7 +1,7 @@
 {
-  "name": "react-native-rsa-native",
-  "version": "2.0.5",
-  "description": "A native implementation of RSA key generation and encryption/decryption.",
+  "name": "react-native-rsa-native-lite",
+  "version": "1.0.0",
+  "description": "A lighter native implementation of RSA key generation and encryption/decryption. A subset of https://github.com/amitaymolko/react-native-rsa-native",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -13,14 +13,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/amitaymolko/react-native-rsa-native.git"
+    "url": "https://github.com/jlepp/react-native-rsa-native-lite.git"
   },
   "bugs": {
-    "url": "https://github.com/amitaymolko/react-native-rsa-native/issues"
+    "url": "https://github.com/jlepp/react-native-rsa-native-lite/issues"
   },
   "author": {
-    "name": "Amitay Molko"
+    "name": "James Lepp"
   },
   "license": "MIT",
-  "homepage": "https://github.com/amitaymolko/react-native-rsa-native#readme"
+  "homepage": "https://github.com/jlepp/react-native-rsa-native-lite#readme"
 }

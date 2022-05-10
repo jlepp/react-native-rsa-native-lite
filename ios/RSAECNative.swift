@@ -126,24 +126,7 @@ class RSAECNative: NSObject {
         return self.generate(keySize: 256);
     }
     
-    public func generateCSR(CN: String?, withAlgorithm: String) -> String? {
-        self.setAlgorithm(algorithm: withAlgorithm)
-        //        self.privateKey = self.getPrivateKeyChain(tag: self.privateKeyTag!)
-        self.publicKeyBits = self.getPublicKeyChainData(tag: self.publicKeyTag!)
-        var csrString: String?
-        let csrBlock: SecKeyPerformBlock = { privateKey in
-            let csr = CertificateSigningRequest(commonName: CN, organizationName: nil, organizationUnitName: nil, countryName: nil, stateOrProvinceName: nil, localityName: nil, keyAlgorithm: self.keyAlgorithm)
-            csrString = csr.buildCSRAndReturnString(self.publicKeyBits!, privateKey: privateKey)
-        }
-        
-        if ((self.keyTag) != nil) {
-            self.performWithPrivateKeyTag(keyTag: self.privateKeyTag!, block: csrBlock)
-        } else {
-            csrBlock(self.privateKey!);
-        }
-        return csrString
-    }
-    
+       
     private func getPublicKeyChainData(tag : String) -> Data? {
         //Ask keychain to provide the publicKey in bits
         var query: [String: AnyObject] = [

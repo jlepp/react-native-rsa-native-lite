@@ -1,24 +1,20 @@
-declare module 'react-native-rsa-native' {
+declare module 'react-native-rsa-native-lite' {
 	interface PublicKey {
 		public: string;
-	}
-
-	interface CSRKey {
-		csr: string;
 	}
 
 	interface KeyPair extends PublicKey {
 		private: string;
 	}
 
-	type TypeCrypto  = 
+	type TypeCrypto  =
 		'SHA256withRSA'|
 		'SHA512withRSA'|
 		'SHA1withRSA'|
 		'SHA256withECDSA'|
 		'SHA512withECDSA'|
 		'SHA1withECDSA'
-	
+
 
 	namespace RSA {
 		export function generate(): Promise<PublicKey>;
@@ -46,9 +42,7 @@ declare module 'react-native-rsa-native' {
 	namespace RSAKeychain {
 		export function generate(keyTag: string): Promise<PublicKey>;
 		export function generateEC(keyTag: string): Promise<PublicKey>;
-		export function generateCSR(keyTag: string, CN: string, signature?: TypeCrypto): Promise<CSRKey>;
 		export function generateKeys(keyTag: string, keySize: number): Promise<PublicKey>;
-		export function generateCSRWithEC(cn: String,keyTag: string, keySize: number): Promise<PublicKey & CSRKey>;
 		export function deletePrivateKey(keyTag: string): Promise<boolean>;
 		export function encrypt(data: string, keyTag: string): Promise<string>;
 		export function decrypt(data: string, keyTag: string): Promise<string>;
@@ -72,5 +66,5 @@ declare module 'react-native-rsa-native' {
 		export const SHA1withECDSA: string;
 	}
 
-	export { RSA, RSAKeychain, KeyPair, CSRKey };
+	export { RSA, RSAKeychain, KeyPair };
 }
