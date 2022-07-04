@@ -1,5 +1,7 @@
 # react-native-rsa-native
 
+(exploratory fork of amitaymolko/react-native-rsa-native)
+
 A native implementation of RSA key generation and encryption/decryption, sign/verify.
 Keychain implementation
 Implementation is in PKCS1
